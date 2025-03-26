@@ -1,6 +1,7 @@
 package svet;
 
 import svet.npcs.NPC;
+import svet.predmety.Predmet;
 
 import java.util.List;
 

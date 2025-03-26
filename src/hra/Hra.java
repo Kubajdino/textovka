@@ -1,7 +1,7 @@
 package hra;
 
 import prikazy.*;
-import svet.*;
+import svet.predmety.Predmet;
 
 import java.util.Scanner;
 

@@ -2,7 +2,7 @@ package svet.npcs;
 
 import hra.Hra;
 import hra.Inventar;
-import svet.Predmet;
+import svet.predmety.Predmet;
 
 import java.util.Scanner;
 

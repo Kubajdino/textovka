@@ -1,8 +1,6 @@
 package prikazy;
 
 import hra.Hra;
-import hra.Hrac;
-import svet.Predmet;
 
 public class Vezmi implements Command {
 

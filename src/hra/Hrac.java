@@ -1,10 +1,6 @@
 package hra;
 
 import svet.Mistnost;
-import svet.Predmet;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Hrac {
     private Mistnost aktualniMistnost;

@@ -15,8 +15,7 @@ public class Jdi implements Command {
         Hrac hrac = hra.getHrac();
         HerniSvet svet = hra.getSvet();
         if (argument != null) {
-            hrac.presunSe(argument, svet);
-            return "Presnunul se do " + hrac.getAktualniMistnost().getNazev();
+            return hrac.presunSe(argument, svet);
         } else {
             return "Kam chceš jít?\n" + hrac.getAktualniMistnost().getSousedi();
         }

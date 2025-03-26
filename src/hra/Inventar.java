@@ -1,6 +1,6 @@
 package hra;
 
-import svet.Predmet;
+import svet.predmety.Predmet;
 
 import java.util.ArrayList;
 import java.util.List;
