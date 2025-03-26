@@ -17,6 +17,12 @@
     ]
   },
   {
+    "nazev": "cesta",
+    "popis": "Obchodní cesta propojující vše.",
+    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "vstupni hala"],
+    "predmety": []
+  },
+  {
     "nazev": "zbrojnice",
     "popis": "Zde se prodávají zbraně a brnění.",
     "sousedi": ["cesta"],
@@ -34,9 +40,21 @@
     ]
   },
   {
-    "nazev": "cesta",
-    "popis": "Obchodní cesta propojující vše.",
-    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "vstupni hala"],
-    "predmety": []
+  "nazev": "knihovna",
+  "popis": "Mestska knihovna, mozna zde budou nejake zajimave informace.",
+  "sousedi": ["cesta"],
+  "predmet": []
+},
+  {
+    "nazev": "svatyne",
+    "popis": "Stara svatyne s hodnym kouzelnikem.",
+    "sousedi": ["cesta"],
+    "predmet": []
+  },
+  {
+    "nazev": "veznice",
+    "popis": "Veznice s vezni",
+    "sousedi": ["cesta", "jeskyne"],
+    "predmet": []
   }
 ]

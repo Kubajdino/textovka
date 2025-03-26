@@ -18,4 +18,9 @@ public abstract class Predmet {
     public void setNazev(String nazev) {
         this.nazev = nazev;
     }
+
+    @Override
+    public String toString() {
+        return nazev;
+    }
 }

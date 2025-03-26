@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="novy repo doma setup&#10;Predmty zacatek&#10;oprava command">
-      <change afterPath="$PROJECT_DIR$/src/svet/npcs/Odemykac.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/svet/npcs/Straz.java" afterDir="false" />
+    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="pred zmenami nacitace">
+      <change afterPath="$PROJECT_DIR$/src/prikazy/Pouzij.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/mapa.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/mapa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hrac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Prozkoumej.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/Mistnost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/Mistnost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Inforamce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Informace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Vezmi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Vezmi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Predmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Predmet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,7 @@
       <updated>1742975511303</updated>
       <workItem from="1742975512342" duration="4509000" />
       <workItem from="1743009267763" duration="183000" />
-      <workItem from="1743009534435" duration="6452000" />
+      <workItem from="1743009534435" duration="7633000" />
     </task>
     <task id="LOCAL-00001" summary="ve skole">
       <option name="closed" value="true" />
@@ -124,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743011803668</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pred zmenami nacitace">
+      <option name="closed" value="true" />
+      <created>1743025479457</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743025479457</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ve skole" />
     <MESSAGE value="novy repo doma setup&#10;Predmty zacatek&#10;oprava command" />
-    <option name="LAST_COMMIT_MESSAGE" value="novy repo doma setup&#10;Predmty zacatek&#10;oprava command" />
+    <MESSAGE value="pred zmenami nacitace" />
+    <option name="LAST_COMMIT_MESSAGE" value="pred zmenami nacitace" />
   </component>
 </project>
