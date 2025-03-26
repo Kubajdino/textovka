@@ -1,7 +1,7 @@
 package hra;
 
 import prikazy.*;
-import svet.predmety.Predmet;
+import svet.predmety.Informace;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class Hra {
         svet = new HerniSvet();
         hrac = new Hrac(svet.getMistnost("hrad"));
         inventar = new Inventar();
-        inventar.pridejPredmet(new Predmet("test"));
+        inventar.pridejPredmet(new Informace("test", "test"));
         prikazy = new SeznamPrikazu();
         inicializujPrikazy();
     }

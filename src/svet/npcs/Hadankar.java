@@ -2,6 +2,7 @@ package svet.npcs;
 
 import hra.Hra;
 import hra.Inventar;
+import svet.predmety.Lektvar;
 import svet.predmety.Predmet;
 
 import java.util.Scanner;
@@ -26,7 +27,7 @@ public class Hadankar extends NPC{
     }
 
 
-    public boolean hadej() {
+    private boolean hadej() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(hadanka);
         System.out.print("> ");
@@ -45,9 +46,9 @@ public class Hadankar extends NPC{
         Inventar inventar = hra.getInventar();
         System.out.println(getDialog());
 
-        boolean uspel = hadej();
-        if (uspel) {
-            inventar.pridejPredmet(new Predmet("Amulet"));
+
+        if (hadej()) {
+            inventar.pridejPredmet(new Lektvar("Lektvar zdravi",50));
             return "Získal jsi amulet!";                                               //neni hotovo
         } else {
             return "Hadankář se směje a nic ti nedá...";

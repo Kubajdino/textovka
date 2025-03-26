@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="ve skole">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="novy repo doma setup&#10;Predmty zacatek&#10;oprava command">
+      <change afterPath="$PROJECT_DIR$/src/svet/npcs/Odemykac.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/svet/npcs/Straz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mojeskola.iml" beforeDir="false" afterPath="$PROJECT_DIR$/textovka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/mapa.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/mapa.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hra/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hra/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hrac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/Inventar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Inventar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Jdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Jdi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Mluv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Vezmi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Vezmi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Prozkoumej.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/svet/Mistnost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/Mistnost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/Predmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Predmet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Inforamce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Informace.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2uqUHB8SKE2XMpjmuClAQSPR3ml" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -107,7 +106,7 @@
       <updated>1742975511303</updated>
       <workItem from="1742975512342" duration="4509000" />
       <workItem from="1743009267763" duration="183000" />
-      <workItem from="1743009534435" duration="1733000" />
+      <workItem from="1743009534435" duration="6452000" />
     </task>
     <task id="LOCAL-00001" summary="ve skole">
       <option name="closed" value="true" />
@@ -117,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742980012906</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="novy repo doma setup&#10;Predmty zacatek&#10;oprava command">
+      <option name="closed" value="true" />
+      <created>1743011803668</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743011803668</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ve skole" />
-    <option name="LAST_COMMIT_MESSAGE" value="ve skole" />
+    <MESSAGE value="novy repo doma setup&#10;Predmty zacatek&#10;oprava command" />
+    <option name="LAST_COMMIT_MESSAGE" value="novy repo doma setup&#10;Predmty zacatek&#10;oprava command" />
   </component>
 </project>

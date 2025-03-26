@@ -3,36 +3,40 @@
     "nazev": "hrad",
     "popis": "Nachazis se v hradu Eldor.",
     "sousedi": ["cesta"],
-    "predmet": null
-  },
-  {
-    "nazev": "cesta",
-    "popis": "Obchodni cesta propojujici vse.",
-    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "vstupni hala"],
-    "predmet": null
+    "predmety": [
+      {
+        "nazev": "Smlouva",
+        "typ": "Informace",
+        "informace": "Zabij temného mága a dostaneš mou princeznu."
+      },
+      {
+        "nazev": "Klenot",
+        "typ": "Informace",
+        "informace": "Tento klenot má obrovskou hodnotu."
+      }
+    ]
   },
   {
     "nazev": "zbrojnice",
-    "popis": "Zde se prodavaji zbrane a brneni.",
+    "popis": "Zde se prodávají zbraně a brnění.",
     "sousedi": ["cesta"],
-    "predmet": null
+    "predmety": [
+      {
+        "nazev": "Meč osudu",
+        "typ": "Zbran",
+        "sila": 15
+      },
+      {
+        "nazev": "Štít draka",
+        "typ": "Zbran",
+        "sila": 8
+      }
+    ]
   },
   {
-    "nazev": "knihovna",
-    "popis": "Mestska knihovna, mozna zde budou nejake zajimave informace.",
-    "sousedi": ["cesta"],
-    "predmet": null
-  },
-  {
-    "nazev": "svatyne",
-    "popis": "Stara svatyne s hodnym kouzelnikem.",
-    "sousedi": ["cesta"],
-    "predmet": null
-  },
-  {
-    "nazev": "veznice",
-    "popis": "Veznice s vezni",
-    "sousedi": ["cesta", "jeskyne"],
-    "predmet": null
+    "nazev": "cesta",
+    "popis": "Obchodní cesta propojující vše.",
+    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "vstupni hala"],
+    "predmety": []
   }
 ]
