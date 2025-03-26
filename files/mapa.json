@@ -1,0 +1,38 @@
+[
+  {
+    "nazev": "hrad",
+    "popis": "Nachazis se v hradu Eldor.",
+    "sousedi": ["cesta"],
+    "predmet": null
+  },
+  {
+    "nazev": "cesta",
+    "popis": "Obchodni cesta propojujici vse.",
+    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "vstupni hala"],
+    "predmet": null
+  },
+  {
+    "nazev": "zbrojnice",
+    "popis": "Zde se prodavaji zbrane a brneni.",
+    "sousedi": ["cesta"],
+    "predmet": null
+  },
+  {
+    "nazev": "knihovna",
+    "popis": "Mestska knihovna, mozna zde budou nejake zajimave informace.",
+    "sousedi": ["cesta"],
+    "predmet": null
+  },
+  {
+    "nazev": "svatyne",
+    "popis": "Stara svatyne s hodnym kouzelnikem.",
+    "sousedi": ["cesta"],
+    "predmet": null
+  },
+  {
+    "nazev": "veznice",
+    "popis": "Veznice s vezni",
+    "sousedi": ["cesta", "jeskyne"],
+    "predmet": null
+  }
+]
