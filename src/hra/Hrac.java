@@ -5,11 +5,16 @@ import svet.predmety.Predmet;
 
 public class Hrac {
     private Mistnost aktualniMistnost;
-    private int zivoty;
+    private int zdravi;
+    private int presnost;
+    private int sila;
+    private int kritikal;
     private boolean hledanost;
 
     public Hrac(Mistnost startovniMistnost) {
+
         this.aktualniMistnost = startovniMistnost;
+        this.zdravi = 100;
     }
 
     public String presunSe(String nazevMistnosti, HerniSvet svet) {
@@ -32,7 +37,7 @@ public class Hrac {
             odpoved += "\nJe zde postava: " + mistnost.getNpc().getJmeno();
         }
 
-        odpoved += "\nJsi v místnosti: " + mistnost.getNazev() +"\n"+ mistnost.getPopis();
+        odpoved += "\n"+ mistnost.getPopis();
 
         return odpoved;
     }
@@ -40,5 +45,33 @@ public class Hrac {
 
     public Mistnost getAktualniMistnost() {
         return aktualniMistnost;
+    }
+
+    public int getZdravi() {
+        return zdravi;
+    }
+
+    public void setZdravi(int zdravi) {
+        this.zdravi = zdravi;
+    }
+
+    public int getSila() {
+        return sila;
+    }
+
+    public void setSila(int sila) {
+        this.sila = sila;
+    }
+
+    public int getPresnost() {
+        return presnost;
+    }
+
+    public void setPresnost(int presnost) {
+        this.presnost = presnost;
+    }
+
+    public int getKritikal() {
+        return kritikal;
     }
 }
