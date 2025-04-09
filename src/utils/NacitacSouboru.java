@@ -6,6 +6,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import svet.Mistnost;
+import svet.npcs.Bojovnik;
 import svet.npcs.Hadankar;
 import svet.npcs.NPC;
 import svet.npcs.Univerzal;
@@ -68,6 +69,8 @@ public class NacitacSouboru {
                 NPC npc;
                 if (jsonNPC.typ.equals("hadankar")) {
                     npc = new Hadankar(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.hadanka, jsonNPC.odpoved);
+                } else if (jsonNPC.typ.equals("bojovnik")) {
+                    npc = new Bojovnik(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.sila, jsonNPC.zdravi);
                 } else {
                     npc = new Univerzal(jsonNPC.jmeno, jsonNPC.dialog);
                 }
@@ -93,6 +96,8 @@ public class NacitacSouboru {
         String mistnost;
         String hadanka;
         String odpoved;
+        int zdravi;
+        int sila;
     }
 
    public static String[] nactiObecneInfo(String soubor){

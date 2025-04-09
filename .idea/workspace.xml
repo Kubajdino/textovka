@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="nacitac done">
-      <change afterPath="$PROJECT_DIR$/src/svet/npcs/Agresor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/npc.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/npc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hra/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hra/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hrac.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prikazy/Boj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Boj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Agresor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/svet/npcs/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +33,12 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Kubajdino/textovka.git&quot;,
-    &quot;accountId&quot;: &quot;ddcc2a27-c0c3-4201-aa19-4db9b0482a29&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kubajdino/textovka.git",
+    "accountId": "211267ed-094e-409a-8728-9646945277f3"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -84,8 +87,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
       </set>
     </attachedChunks>
   </component>
@@ -102,6 +105,7 @@
       <workItem from="1743009534435" duration="8241000" />
       <workItem from="1743430166338" duration="2195000" />
       <workItem from="1744031706493" duration="7591000" />
+      <workItem from="1744180502873" duration="5349000" />
     </task>
     <task id="LOCAL-00001" summary="ve skole">
       <option name="closed" value="true" />

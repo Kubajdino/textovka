@@ -18,5 +18,13 @@
     "dialog": "Vse me zbozi pro tebe vypada moc levne ale mam tu jednu takovou truhlu, ale nemam od ni klice pokud ho sezenes tak ti ji dam zadarmiko, ale chci vedet co tam je",
     "typ": "univerzal",
     "mistnost": "veznice"
-  }
+  },
+  {
+  "jmeno": "Straz",
+  "dialog": "Chcpini mrdko",
+  "zdravi": 20,
+  "sila": 10,
+  "typ": "bojovnik",
+  "mistnost": "cesta"
+}
 ]
