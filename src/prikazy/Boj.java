@@ -16,6 +16,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Boj implements Command{
 
+    boolean braniSeNPC = false;
+    boolean braniSeHrac = false;
+
 
 
     public Boj() {
@@ -35,7 +38,7 @@ public class Boj implements Command{
         if(!argument.equalsIgnoreCase(npc.getJmeno())){
             return "Nikdo takový tu není.";
         }else{
-            if (!npc.getClass().equals(Bojovnik.class)) {
+            if (!(npc instanceof Bojovnik)) {
                 return (mistnost.getNpc().getJmeno() + " s tebou nebude bojovat;)");
             }else{
                 bojovnik = (Bojovnik)npc;
@@ -50,19 +53,35 @@ public class Boj implements Command{
                     System.out.println("4. utect");
                     System.out.print("> ");
 
-                    int volba = scanner.nextInt();
-                    scanner.nextLine();
+                    braniSeNPC = false;
+                    braniSeHrac = false;
+
+                    int volba;
+                    try {
+                        volba = scanner.nextInt();
+                        scanner.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Neplatna volba");
+                        scanner.nextLine();
+                        continue;
+                    }
+
                     switch (volba){
                         case 1:
+                            if(bojovnik.getZdravi() > 0)NPCAI(bojovnik,hrac,hra);
                             utok(hrac, bojovnik);
                             break;
                         case 2:
-                            obrana(hrac, bojovnik);
+                            braniSeHrac = true;
+                            System.out.println("Branis se");
+                            if(bojovnik.getZdravi() > 0)NPCAI(bojovnik,hrac,hra);
                             break;
                         case 3:
+                            if(bojovnik.getZdravi() > 0)NPCAI(bojovnik,hrac,hra);
                             leceni(hrac, inventar, hra);
                             break;
                         case 4:
+                            if(bojovnik.getZdravi() > 0)NPCAI(bojovnik,hrac,hra);
                             if(!utek(hrac, svet, bojovnik)){
                                 break;
                             }
@@ -72,8 +91,10 @@ public class Boj implements Command{
                             System.out.println("Neplatna volba");
                             continue;
                 }
-            }
-            if(hrac.getZdravi()>0){
+
+                System.out.println("Mas "+hrac.getZdravi()+" hp \nNepritel ma "+ bojovnik.getZdravi() +" hp");
+                }
+                if(hrac.getZdravi()>0){
                 mistnost.setNpc(null);
                 return "Vyhral jsi nepritel je mrtev";
             }
@@ -96,8 +117,9 @@ public class Boj implements Command{
                 dmg *= 1.5;
                 System.out.println("Kritický zásah!");
             }
+            if(braniSeNPC) dmg /= 2;
             npc.setZdravi(npc.getZdravi()-(int)dmg);
-            System.out.println("Způsobil jsi " + dmg + " dmg.");
+            System.out.println("-Způsobil jsi " + dmg + " dmg.");
         } else {
             System.out.println("Zasah nevysel!");
         }
@@ -127,13 +149,14 @@ public class Boj implements Command{
         } catch (InterruptedException e) {
             // přerušení spánku
         }
-
-        if (obranaUspesna.get()) {
-            System.out.println("Obrana úspěšná! Counter útok!");
-            npc.setZdravi(npc.getZdravi() - hrac.getSila());
-        } else {
-            System.out.println("Obrana neúspěšná! Dostal jsi, ale jen polovicni damage.");
-            hrac.setZdravi(hrac.getZdravi() - npc.getSila()/2);
+        if(!braniSeNPC) {
+            if (obranaUspesna.get()) {
+                System.out.println("Obrana úspěšná! Counter útok!");
+                npc.setZdravi(npc.getZdravi() - hrac.getSila());
+            } else {
+                System.out.println("Obrana neúspěšná! Dostal jsi, ale jen polovicni damage.");
+                hrac.setZdravi(hrac.getZdravi() - npc.getSila() / 2);
+            }
         }
 
         inputThread.interrupt();
@@ -167,7 +190,44 @@ public class Boj implements Command{
         }
 
     }
+
+
+
+    void NPCAI(Bojovnik bojovnik, Hrac hrac, Hra hra){
+        Random rand = new Random();
+
+        if (bojovnik.getZdravi() < 20 && rand.nextInt(100) < 50) {
+            bojovnik.setZdravi(bojovnik.getZdravi()+20);
+            System.out.println(bojovnik.getJmeno() + " použil léčivý lektvar! Nyni ma "+bojovnik.getZdravi());
+            return;
+        }
+        int volba = rand.nextInt(2);
+
+        switch (volba) {
+            case 0:
+                // Útok na hráče
+                System.out.println(bojovnik.getJmeno() + " útočí!");
+                if(braniSeHrac){
+                    obrana(hrac,bojovnik);
+                }else {
+                    int dmg = bojovnik.getSila();
+                    if(rand.nextInt(100)<bojovnik.getKritikal())dmg*=2;
+                    hrac.setZdravi(hrac.getZdravi() - dmg);
+                    System.out.println("-Dostal jsi " + dmg + " poškození!");
+                }
+                break;
+            case 1:
+                System.out.println(bojovnik.getJmeno() +" se brání!");
+                braniSeNPC = true;
+                if (braniSeHrac) {
+                    System.out.println("Oba se bráníte, žádné poškození!");
+                }
+                break;
+        }
+    }
 }
+
+
 
 
 

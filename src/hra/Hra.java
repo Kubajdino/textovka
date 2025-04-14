@@ -27,7 +27,7 @@ public class Hra {
         prikazy.addCommand("mluv <NPC>","mluv", new Mluv());
         prikazy.addCommand("napoveda","napoveda", new Napoveda());
         prikazy.addCommand("konec","konec", new Konec());
-        prikazy.addCommand("boj","boj", new Boj());
+        prikazy.addCommand("boj <NPC>","boj", new Boj());
     }
 
     public void run() {

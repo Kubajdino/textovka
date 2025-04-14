@@ -14,7 +14,7 @@ public class Hrac {
     public Hrac(Mistnost startovniMistnost) {
 
         this.aktualniMistnost = startovniMistnost;
-        this.zdravi = 20;                                               // pak zmen na 100
+        this.zdravi = 100;                                               // pak zmen na 100
         this.sila = 10;
         this.presnost = 100;
         this.kritikal = 50;

@@ -70,7 +70,7 @@ public class NacitacSouboru {
                 if (jsonNPC.typ.equals("hadankar")) {
                     npc = new Hadankar(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.hadanka, jsonNPC.odpoved);
                 } else if (jsonNPC.typ.equals("bojovnik")) {
-                    npc = new Bojovnik(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.sila, jsonNPC.zdravi);
+                    npc = new Bojovnik(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.sila, jsonNPC.zdravi, jsonNPC.kritikal);
                 } else {
                     npc = new Univerzal(jsonNPC.jmeno, jsonNPC.dialog);
                 }
@@ -98,6 +98,7 @@ public class NacitacSouboru {
         String odpoved;
         int zdravi;
         int sila;
+        int kritikal;
     }
 
    public static String[] nactiObecneInfo(String soubor){

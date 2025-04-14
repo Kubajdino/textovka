@@ -24,6 +24,7 @@
   "dialog": "Chcpini mrdko",
   "zdravi": 100,
   "sila": 10,
+  "kritikal": 30,
   "typ": "bojovnik",
   "mistnost": "cesta"
 }

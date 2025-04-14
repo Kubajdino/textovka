@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="nacitac done">
+    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="boj hotovej az na nepritel AI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/npc.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/npc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hra/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hra/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hrac.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prikazy/Boj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Boj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/Mistnost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/Mistnost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Lektvar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/LektvarZdravi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +104,7 @@
       <workItem from="1743430166338" duration="2195000" />
       <workItem from="1744031706493" duration="7591000" />
       <workItem from="1744180502873" duration="5349000" />
-      <workItem from="1744644969574" duration="4157000" />
+      <workItem from="1744644969574" duration="11289000" />
     </task>
     <task id="LOCAL-00001" summary="ve skole">
       <option name="closed" value="true" />
@@ -138,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743026655518</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="boj hotovej az na nepritel AI">
+      <option name="closed" value="true" />
+      <created>1744650242063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744650242063</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +157,7 @@
     <MESSAGE value="novy repo doma setup&#10;Predmty zacatek&#10;oprava command" />
     <MESSAGE value="pred zmenami nacitace" />
     <MESSAGE value="nacitac done" />
-    <option name="LAST_COMMIT_MESSAGE" value="nacitac done" />
+    <MESSAGE value="boj hotovej az na nepritel AI" />
+    <option name="LAST_COMMIT_MESSAGE" value="boj hotovej az na nepritel AI" />
   </component>
 </project>
