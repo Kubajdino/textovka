@@ -1,5 +1,6 @@
 package hra;
 
+import svet.predmety.LektvarZdravi;
 import svet.predmety.Predmet;
 
 import java.util.ArrayList;
@@ -31,6 +32,15 @@ public class Inventar {
             sb.append(p.getNazev()).append(", ");
         }
         return sb.toString();
+    }
+
+    public Predmet najdiLektvarZdravi() {
+        for (Predmet p : inventar) {
+            if (p instanceof LektvarZdravi) {
+                return p;
+            }
+        }
+        return null;
     }
 
     public List<Predmet> getInventar() {

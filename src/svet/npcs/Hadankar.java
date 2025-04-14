@@ -2,8 +2,7 @@ package svet.npcs;
 
 import hra.Hra;
 import hra.Inventar;
-import svet.predmety.Lektvar;
-import svet.predmety.Predmet;
+import svet.predmety.LektvarZdravi;
 
 import java.util.Scanner;
 
@@ -48,7 +47,7 @@ public class Hadankar extends NPC{
 
 
         if (hadej()) {
-            inventar.pridejPredmet(new Lektvar("Lektvar zdravi",50));
+            inventar.pridejPredmet(new LektvarZdravi("Lektvar zdravi",50));
             return "Získal jsi lektvar!";                                               //neni hotovo
         } else {
             return "Hadankář se směje a nic ti nedá...";

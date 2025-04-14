@@ -3,13 +3,16 @@ package prikazy;
 import hra.HerniSvet;
 import hra.Hra;
 import hra.Hrac;
+import hra.Inventar;
 import svet.Mistnost;
 import svet.npcs.Bojovnik;
 import svet.npcs.NPC;
+import svet.predmety.Predmet;
 
 import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Boj implements Command{
 
@@ -26,6 +29,7 @@ public class Boj implements Command{
         HerniSvet svet = hra.getSvet();
         Mistnost mistnost = hrac.getAktualniMistnost();
         NPC npc = mistnost.getNpc();
+        Inventar inventar = hra.getInventar();
         Bojovnik bojovnik;
 
         if(!argument.equalsIgnoreCase(npc.getJmeno())){
@@ -36,7 +40,7 @@ public class Boj implements Command{
             }else{
                 bojovnik = (Bojovnik)npc;
                 System.out.println("Boj zacina proti " + mistnost.getNpc().getJmeno());
-                System.out.println("Tvuj nepritel ma " + bojovnik.getZdravi() + "zivotu.");
+                System.out.println("Tvuj nepritel ma " + bojovnik.getZdravi() + " zivotu.");
 
                 while(hrac.getZdravi() > 0 && bojovnik.getZdravi() > 0) {
                     System.out.println("Co chces udelat?");
@@ -47,7 +51,7 @@ public class Boj implements Command{
                     System.out.print("> ");
 
                     int volba = scanner.nextInt();
-
+                    scanner.nextLine();
                     switch (volba){
                         case 1:
                             utok(hrac, bojovnik);
@@ -56,7 +60,7 @@ public class Boj implements Command{
                             obrana(hrac, bojovnik);
                             break;
                         case 3:
-
+                            leceni(hrac, inventar, hra);
                             break;
                         case 4:
                             if(!utek(hrac, svet, bojovnik)){
@@ -70,6 +74,7 @@ public class Boj implements Command{
                 }
             }
             if(hrac.getZdravi()>0){
+                mistnost.setNpc(null);
                 return "Vyhral jsi nepritel je mrtev";
             }
             else{
@@ -82,17 +87,16 @@ public class Boj implements Command{
     }
 
      void utok(Hrac hrac, Bojovnik npc){
-        int zasah = (int) (Math.random() * 100);
         int sanceNaZasah = hrac.getPresnost();
         int sanceNaKrit = hrac.getKritikal();
 
-        if (zasah < sanceNaZasah) {
-            int dmg = hrac.getSila();
-            if (Math.random() * 100 < sanceNaKrit) {
-                dmg *= (int) 1.5;
+        if (Math.random() * 100 <= sanceNaZasah) {
+            double dmg = hrac.getSila();
+            if (Math.random() * 100 <= sanceNaKrit) {
+                dmg *= 1.5;
                 System.out.println("Kritický zásah!");
             }
-            npc.setZdravi(npc.getZdravi()-dmg);
+            npc.setZdravi(npc.getZdravi()-(int)dmg);
             System.out.println("Způsobil jsi " + dmg + " dmg.");
         } else {
             System.out.println("Zasah nevysel!");
@@ -100,39 +104,52 @@ public class Boj implements Command{
     }
 
      void obrana(Hrac hrac, Bojovnik npc) {
-        long startTime = System.currentTimeMillis();
-        long timeWindow = 2000; // 2 sekundy na reakci
-        boolean obranaUspesna = false;
+        AtomicBoolean obranaUspesna = new AtomicBoolean(false);
 
-        System.out.println("Stiskni jakoukoliv klávesu pro obranu!");
-
-        while (System.currentTimeMillis() < startTime + timeWindow) {
-            if (isKeyPressed()) {
-                obranaUspesna = true;
-                break;
+        Thread inputThread = new Thread(() -> {
+            try {
+                int input = System.in.read();
+                char ch = (char) input;
+                if (ch == 'w' || ch == 'a' || ch == 's' || ch == 'd') {
+                    obranaUspesna.set(true);
+                }
+            } catch (IOException e) {
+                // chyba při čtení
             }
-        }
+        });
 
-        if (obranaUspesna) {
-            System.out.println("Obrana úspěšná! Counter útok!");
-            npc.setZdravi(npc.getZdravi()-hrac.getSila());
-        } else {
-            System.out.println("Obrana neúspěšná! Dostal jsi plný damage.");
-            hrac.setZdravi(hrac.getZdravi() - npc.getSila());
-        }
-    }
+        inputThread.start();
 
-    // Metoda pro kontrolu stisku klávesy
-     boolean isKeyPressed() {
+        System.out.println("Rychle stiskni klávesu W, S, A, D pro obranu! Máš 2 sekundy!");
+
         try {
-            // Čte znak ze vstupu
-            System.in.read();
-            return true;
-        } catch (IOException e) {
-            return false;
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            // přerušení spánku
         }
 
+        if (obranaUspesna.get()) {
+            System.out.println("Obrana úspěšná! Counter útok!");
+            npc.setZdravi(npc.getZdravi() - hrac.getSila());
+        } else {
+            System.out.println("Obrana neúspěšná! Dostal jsi, ale jen polovicni damage.");
+            hrac.setZdravi(hrac.getZdravi() - npc.getSila()/2);
+        }
+
+        inputThread.interrupt();
     }
+
+    void leceni(Hrac hrac, Inventar inventar, Hra hra) {
+        Predmet p = inventar.najdiLektvarZdravi();
+        if (p != null) {
+            System.out.println(p.pouzij(hra));
+            inventar.vymazPredmet(p);
+        } else {
+            System.out.println("Nemáš žádný léčivý lektvar!");
+        }
+    }
+
+
 
     boolean utek(Hrac hrac, HerniSvet svet, Bojovnik npc){
         int sanceNaUtek = (int) (Math.random() * 100) - (50 - hrac.getZdravi());

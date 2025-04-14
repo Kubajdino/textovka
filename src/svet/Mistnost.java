@@ -46,4 +46,5 @@ public class Mistnost {
     public List<Predmet> getPredmety() {
         return predmety;
     }
+
 }

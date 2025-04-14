@@ -22,7 +22,7 @@
   {
   "jmeno": "Straz",
   "dialog": "Chcpini mrdko",
-  "zdravi": 20,
+  "zdravi": 100,
   "sila": 10,
   "typ": "bojovnik",
   "mistnost": "cesta"

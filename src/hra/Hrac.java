@@ -6,9 +6,9 @@ import svet.predmety.Predmet;
 public class Hrac {
     private Mistnost aktualniMistnost;
     private int zdravi;
-    private int presnost;
+    private int presnost;       // %
+    private int kritikal;       // %
     private int sila;
-    private int kritikal;
     private boolean hledanost;
 
     public Hrac(Mistnost startovniMistnost) {
@@ -16,7 +16,8 @@ public class Hrac {
         this.aktualniMistnost = startovniMistnost;
         this.zdravi = 20;                                               // pak zmen na 100
         this.sila = 10;
-        this.presnost = 50;
+        this.presnost = 100;
+        this.kritikal = 50;
     }
 
     public String presunSe(String nazevMistnosti, HerniSvet svet) {
