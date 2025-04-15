@@ -47,8 +47,9 @@ public class Hadankar extends NPC{
 
 
         if (hadej()) {
-            inventar.pridejPredmet(new LektvarZdravi("Lektvar zdravi",50));
-            return "Získal jsi lektvar!";                                               //neni hotovo
+            if(getPredmet() != null)inventar.pridejPredmet(getPredmet());
+            this.setPredmet(null);
+            return "Získal jsi tekutinu!";
         } else {
             return "Hadankář se směje a nic ti nedá...";
         }

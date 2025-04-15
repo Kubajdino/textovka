@@ -11,7 +11,7 @@ public class Mistnost {
     private String popis;
     private List<String> sousedi;
     private NPC npc;
-    private List<Predmet> predmety;
+    private Predmet predmet;
 
     public Mistnost(String nazev, String popis, List<String> sousedi) {
         this.nazev = nazev;
@@ -24,7 +24,7 @@ public class Mistnost {
         this.popis = popis;
         this.sousedi = sousedi;
         this.npc = npc;
-        predmety = new ArrayList<>();
+        this.predmet = predmet;
     }
 
     public List<String> getSousedi() {
@@ -43,8 +43,11 @@ public class Mistnost {
         return popis;
     }
 
-    public List<Predmet> getPredmety() {
-        return predmety;
+    public Predmet getPredmet() {
+        return predmet;
     }
 
+    public void setPredmet(Predmet predmet) {
+        this.predmet = predmet;
+    }
 }

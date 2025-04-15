@@ -1,6 +1,7 @@
 package hra;
 
 import svet.Mistnost;
+import svet.predmety.Predmet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class HerniSvet {
     public HerniSvet() {
         mistnosti = utils.NacitacSouboru.nactiMistnostiZeSouboru("files/mapa.json");
         utils.NacitacSouboru.nactiNPC(mistnosti,"files/npc.json");
+        utils.NacitacSouboru.nactiPredmet(mistnosti,"files/predmety.json");
         informace = utils.NacitacSouboru.nactiObecneInfo("files/obecneInfo.txt");
         jmenoHry = informace[0];
     }

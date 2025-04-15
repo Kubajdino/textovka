@@ -4,13 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="boj hotovej az na nepritel AI">
+    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="boj je done&#10;jeste ale asi debug">
+      <change afterPath="$PROJECT_DIR$/files/predmety.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/svet/npcs/Boss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/svet/npcs/SPredmetem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/svet/predmety/Bonus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/mapa.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/mapa.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/npc.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/npc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hra/HerniSvet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/HerniSvet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hra/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hra/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hrac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hra/Inventar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Inventar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prikazy/Boj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Boj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Jdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Jdi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Mluv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Napoveda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Pomoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Pouzij.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Pouzij.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prikazy/Vezmi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Vezmi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/Mistnost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/Mistnost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/npcs/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Straz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Informace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Informace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/predmety/LektvarZdravi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/LektvarZdravi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Zbran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Zbran.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +50,12 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Kubajdino/textovka.git",
-    "accountId": "ddcc2a27-c0c3-4201-aa19-4db9b0482a29"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kubajdino/textovka.git&quot;,
+    &quot;accountId&quot;: &quot;ddcc2a27-c0c3-4201-aa19-4db9b0482a29&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -48,31 +67,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Škola/IT 2. rocnik/textovka",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Škola/IT 2. rocnik/textovka&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -104,7 +123,8 @@
       <workItem from="1743430166338" duration="2195000" />
       <workItem from="1744031706493" duration="7591000" />
       <workItem from="1744180502873" duration="5349000" />
-      <workItem from="1744644969574" duration="11289000" />
+      <workItem from="1744644969574" duration="11664000" />
+      <workItem from="1744731134445" duration="18251000" />
     </task>
     <task id="LOCAL-00001" summary="ve skole">
       <option name="closed" value="true" />
@@ -146,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744650242063</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="boj je done&#10;jeste ale asi debug">
+      <option name="closed" value="true" />
+      <created>1744666615877</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744666615877</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +186,7 @@
     <MESSAGE value="pred zmenami nacitace" />
     <MESSAGE value="nacitac done" />
     <MESSAGE value="boj hotovej az na nepritel AI" />
-    <option name="LAST_COMMIT_MESSAGE" value="boj hotovej az na nepritel AI" />
+    <MESSAGE value="boj je done&#10;jeste ale asi debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="boj je done&#10;jeste ale asi debug" />
   </component>
 </project>

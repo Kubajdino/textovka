@@ -3,6 +3,8 @@ package prikazy;
 import hra.Hra;
 import hra.Hrac;
 import hra.Inventar;
+import svet.Mistnost;
+import svet.npcs.NPC;
 import svet.predmety.Predmet;
 
 public class Vezmi implements Command {
@@ -14,16 +16,26 @@ public class Vezmi implements Command {
     public String execute(String argument, Hra hra) {
         Hrac hrac = hra.getHrac();
         Inventar inventar = hra.getInventar();
-        if(hrac.getAktualniMistnost().getPredmety() != null) {
-            for(Predmet predmet : hrac.getAktualniMistnost().getPredmety()) {
-                if(predmet.getNazev().equalsIgnoreCase(argument)) {
-                    inventar.pridejPredmet(predmet);
-                    hrac.getAktualniMistnost().getPredmety().remove(predmet);
-                    return "Sebral jsi predmet " + predmet;
-                }
+
+        if (argument == null) {
+            if(hrac.getAktualniMistnost().getPredmet() == null){
+            return "Neni co vzit";
+            }else{
+                return "Zadej co chces vzit: "+hrac.getAktualniMistnost().getPredmet();
             }
 
         }
-        return "Predmet tu neni";
+        if(hrac.getAktualniMistnost().getPredmet() != null) {
+            if(hrac.getAktualniMistnost().getPredmet().getNazev().equalsIgnoreCase(argument)) {
+                    inventar.pridejPredmet(hrac.getAktualniMistnost().getPredmet());
+                    hrac.getAktualniMistnost().setPredmet(null);
+                return "Sebral jsi predmet ";
+            }else{
+                return "Toto nejde sebrat";
+            }
+        }else{
+            return "Neni co vzit";
+        }
+
     }
 }

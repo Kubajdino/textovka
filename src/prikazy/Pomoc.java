@@ -3,9 +3,9 @@ package prikazy;
 import hra.Hra;
 import hra.SeznamPrikazu;
 
-public class Napoveda implements Command{
+public class Pomoc implements Command{
 
-    public Napoveda(){}
+    public Pomoc(){}
 
 
     @Override

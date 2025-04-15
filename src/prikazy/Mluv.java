@@ -6,6 +6,7 @@ import svet.Mistnost;
 import svet.npcs.NPC;
 
 public class Mluv implements Command{
+
     public Mluv() {
     }
 
@@ -17,7 +18,7 @@ public class Mluv implements Command{
             return "Není tu žádný npc.";
         }
         if (argument == null) {
-            return "S kým mám mluvit?\n" + hrac.getAktualniMistnost().getNpc().getJmeno();
+            return "Zadej s kym chces mluvit: " + hrac.getAktualniMistnost().getNpc().getJmeno();
 
         }
         Mistnost mistnost = hrac.getAktualniMistnost();

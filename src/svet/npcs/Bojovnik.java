@@ -1,6 +1,7 @@
 package svet.npcs;
 
 import hra.Hra;
+import svet.predmety.Predmet;
 
 public class Bojovnik  extends NPC{
 

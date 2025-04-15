@@ -34,9 +34,9 @@ public class Inventar {
         return sb.toString();
     }
 
-    public Predmet najdiLektvarZdravi() {
+    public Predmet najdipredmet(String nazev) {
         for (Predmet p : inventar) {
-            if (p instanceof LektvarZdravi) {
+            if (p.getNazev().equalsIgnoreCase(nazev)) {
                 return p;
             }
         }

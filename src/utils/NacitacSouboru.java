@@ -6,19 +6,13 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import svet.Mistnost;
-import svet.npcs.Bojovnik;
-import svet.npcs.Hadankar;
-import svet.npcs.NPC;
-import svet.npcs.Univerzal;
-import svet.predmety.Informace;
-import svet.predmety.Predmet;
-import svet.predmety.Zbran;
+import svet.npcs.*;
+import svet.predmety.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,10 +61,12 @@ public class NacitacSouboru {
 
             for (JsonNPC jsonNPC : npcList) {
                 NPC npc;
-                if (jsonNPC.typ.equals("hadankar")) {
+                if (jsonNPC.NPCTyp.equals("hadankar")) {
                     npc = new Hadankar(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.hadanka, jsonNPC.odpoved);
-                } else if (jsonNPC.typ.equals("bojovnik")) {
+                } else if (jsonNPC.NPCTyp.equals("bojovnik")) {
                     npc = new Bojovnik(jsonNPC.jmeno, jsonNPC.dialog, jsonNPC.sila, jsonNPC.zdravi, jsonNPC.kritikal);
+                }else if (jsonNPC.NPCTyp.equals("spredmetem")) {
+                    npc = new SPredmetem(jsonNPC.jmeno, jsonNPC.dialog);
                 } else {
                     npc = new Univerzal(jsonNPC.jmeno, jsonNPC.dialog);
                 }
@@ -92,7 +88,7 @@ public class NacitacSouboru {
     private static class JsonNPC {
         String jmeno;
         String dialog;
-        String typ;
+        String NPCTyp;
         String mistnost;
         String hadanka;
         String odpoved;
@@ -118,6 +114,61 @@ public class NacitacSouboru {
        }
         return informace;
    }
+
+    public static void nactiPredmet(Map<String, Mistnost> mistnosti, String soubor) {
+        Gson gson = new Gson();
+        try (FileReader reader = new FileReader(soubor)) {
+            Type predmetListType = new TypeToken<List<JsonPredmet>>() {
+            }.getType();
+            List<JsonPredmet> predmetList = gson.fromJson(reader, predmetListType);
+
+            for (JsonPredmet JsonPredmet : predmetList) {
+                Predmet predmet = null;
+                if (JsonPredmet.PredmetTyp.equals("informace")) {
+                    predmet = new Informace(JsonPredmet.nazev, JsonPredmet.informace);
+                } else if (JsonPredmet.PredmetTyp.equals("zbran")) {
+                    predmet = new Zbran(JsonPredmet.nazev, JsonPredmet.sila);
+                } else if(JsonPredmet.PredmetTyp.equals("lektvatZdravi")) {
+                    predmet = new LektvarZdravi(JsonPredmet.nazev, JsonPredmet.zdravi);
+                }else if(JsonPredmet.PredmetTyp.equals("bonus")) {
+                    predmet = new Bonus(JsonPredmet.nazev, JsonPredmet.bonus, JsonPredmet.doba, JsonPredmet.typ);
+                }
+
+
+                if(JsonPredmet.npc != 1) {
+                    if(JsonPredmet.mistnost!=null) {
+                        Mistnost mistnost = mistnosti.get(JsonPredmet.mistnost);
+                        if (mistnost != null) {
+                            mistnost.setPredmet(predmet);
+                        } else {
+                            System.out.println("Chyba: Místnost '" + JsonPredmet.mistnost + "' neexistuje!");
+                        }
+                    }
+                }else{
+                    Mistnost mistnost = mistnosti.get(JsonPredmet.mistnost);
+                    NPC npc = mistnost.getNpc();
+                    npc.setPredmet(predmet);
+                }
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static class JsonPredmet {
+        String PredmetTyp;
+        String nazev;
+        String informace;
+        int zdravi;
+        int sila;
+        int bonus;
+        int doba;
+        String typ;
+        String mistnost;
+        int npc;
+    }
 }
 
 

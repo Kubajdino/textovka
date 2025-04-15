@@ -15,7 +15,6 @@ public class Hra {
         svet = new HerniSvet();
         hrac = new Hrac(svet.getMistnost("hrad"));
         inventar = new Inventar();
-        inventar.pridejPredmet(new Informace("test", "test"));
         prikazy = new SeznamPrikazu();
         inicializujPrikazy();
     }
@@ -25,16 +24,17 @@ public class Hra {
         prikazy.addCommand("vezmi <objekt>","vezmi", new Vezmi());
         prikazy.addCommand("vypis inventar","vypis", new OtevriInventar());
         prikazy.addCommand("mluv <NPC>","mluv", new Mluv());
-        prikazy.addCommand("napoveda","napoveda", new Napoveda());
+        prikazy.addCommand("pomoc","pomoc", new Pomoc());
         prikazy.addCommand("konec","konec", new Konec());
         prikazy.addCommand("boj <NPC>","boj", new Boj());
+        prikazy.addCommand("pouzij <Predmet>","pouzij",new Pouzij());
     }
 
     public void run() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Vítej ve hre "+ svet.getJmenoHry() +"\nPouzij tyto prikazy: ");                        //nacti jemno hry ze souboru
+        System.out.println("\nVítej ve hre "+ svet.getJmenoHry() +"\n\nPouzij tyto prikazy: ");
         System.out.println(prikazy.vypisSeznamPrikazu());
-        System.out.println(hrac.getAktualniMistnost().getPopis());
+        System.out.println(hrac.vypisObsahMistnosti());
 
         while (true) {
             System.out.print("> ");

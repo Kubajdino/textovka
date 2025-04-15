@@ -26,7 +26,7 @@ public class Boj implements Command{
     }
     @Override
     public String execute(String argument, Hra hra){
-        if(argument == null) return "Zadej s kym chces bojovat";
+
         Scanner scanner = new Scanner(System.in);
         Hrac hrac = hra.getHrac();
         HerniSvet svet = hra.getSvet();
@@ -34,6 +34,8 @@ public class Boj implements Command{
         NPC npc = mistnost.getNpc();
         Inventar inventar = hra.getInventar();
         Bojovnik bojovnik;
+
+        if(argument == null) return "Zadej s kym chces bojovat: "+mistnost.getNpc().getJmeno();
 
         if(!argument.equalsIgnoreCase(npc.getJmeno())){
             return "Nikdo takový tu není.";
@@ -49,7 +51,7 @@ public class Boj implements Command{
                     System.out.println("Co chces udelat?");
                     System.out.println("1. utok");
                     System.out.println("2. obrana");
-                    System.out.println("3. leceni");
+                    System.out.println("3. pouzij predemt");
                     System.out.println("4. utect");
                     System.out.print("> ");
 
@@ -78,7 +80,7 @@ public class Boj implements Command{
                             break;
                         case 3:
                             if(bojovnik.getZdravi() > 0)NPCAI(bojovnik,hrac,hra);
-                            leceni(hrac, inventar, hra);
+                            pouzijPredmet(inventar, hra, hrac);
                             break;
                         case 4:
                             if(bojovnik.getZdravi() > 0)NPCAI(bojovnik,hrac,hra);
@@ -96,6 +98,10 @@ public class Boj implements Command{
                 }
                 if(hrac.getZdravi()>0){
                 mistnost.setNpc(null);
+                if(bojovnik.getPredmet() != null){
+                    inventar.pridejPredmet(bojovnik.getPredmet());
+                    System.out.println("Nasel jsi u nej predmet "+bojovnik.getPredmet().getNazev());
+                }
                 return "Vyhral jsi nepritel je mrtev";
             }
             else{
@@ -154,7 +160,7 @@ public class Boj implements Command{
                 System.out.println("Obrana úspěšná! Counter útok!");
                 npc.setZdravi(npc.getZdravi() - hrac.getSila());
             } else {
-                System.out.println("Obrana neúspěšná! Dostal jsi, ale jen polovicni damage.");
+                System.out.println("Obrana neúspěšná! Dostal jsi, ale jen polovicni dmg.");
                 hrac.setZdravi(hrac.getZdravi() - npc.getSila() / 2);
             }
         }
@@ -162,14 +168,20 @@ public class Boj implements Command{
         inputThread.interrupt();
     }
 
-    void leceni(Hrac hrac, Inventar inventar, Hra hra) {
-        Predmet p = inventar.najdiLektvarZdravi();
-        if (p != null) {
-            System.out.println(p.pouzij(hra));
-            inventar.vymazPredmet(p);
-        } else {
-            System.out.println("Nemáš žádný léčivý lektvar!");
+    void pouzijPredmet(Inventar inventar, Hra hra, Hrac hrac) {
+        System.out.print("Jaky predmet chces pouzit: ");
+        for(Predmet p : inventar.getInventar()) System.out.print(p+", ");
+        System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        String vstup = scanner.nextLine();
+        if(inventar.najdipredmet(vstup)!=null) {
+            inventar.najdipredmet(vstup).pouzij(hra);
+            System.out.println(inventar.najdipredmet(vstup).getNazev());
+        }else{
+            System.out.println("Tento predmet nemas");
         }
+        hrac.snizitSilaBonusDoba();
+        hrac.snizitZdraviBonusDoba();
     }
 
 
@@ -213,7 +225,7 @@ public class Boj implements Command{
                     int dmg = bojovnik.getSila();
                     if(rand.nextInt(100)<bojovnik.getKritikal())dmg*=2;
                     hrac.setZdravi(hrac.getZdravi() - dmg);
-                    System.out.println("-Dostal jsi " + dmg + " poškození!");
+                    System.out.println("-Dostal jsi " + dmg + " dmg!");
                 }
                 break;
             case 1:

@@ -1,0 +1,45 @@
+[
+  {
+    "PredmetTyp": "zbran",
+    "nazev": "mec",
+    "sila": 25,
+    "mistnost": "zbrojnice"
+  },
+  {
+    "PredmetTyp": "informace",
+    "nazev": "pssst",
+    "informace": "Dostalo se ke mne ze za veznici se nachazi jeskyne, ale psssssst",
+    "mistnost": "knihovna",
+    "npc": 1
+  },
+  {
+    "PredmetTyp": "informace",
+    "nazev": "informace",
+    "informace": "Ma zbran u ktere je 50% na kriticky zasah!!!",
+    "mistnost": "hrad",
+    "npc": 1
+  },
+  {
+    "PredmetTyp": "lektvarZdravi",
+    "nazev": "Heal",
+    "zdravi": 10,
+    "mistnost": "veznice"
+  },
+  {
+    "PredmetTyp": "bonus",
+    "nazev": "pivo",
+    "bonus": 20,
+    "doba": 2,
+    "typ": "zdravi",
+    "mistnost": "svatyne",
+    "npc": 1
+  },
+  {
+    "PredmetTyp": "bonus",
+    "nazev": "nakopavac",
+    "bonus": 30,
+    "doba": 1,
+    "typ": "sila",
+    "mistnost": "jeskyne"
+  }
+]

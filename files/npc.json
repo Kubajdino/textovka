@@ -1,31 +1,49 @@
 [
   {
     "jmeno": "Kral",
-    "dialog": "Musíš porazit temného mága!",
-    "typ": "univerzal",
+    "dialog": "Musíš porazit temného mága! Tady mas iformace o nem.",
+    "NPCTyp": "spredmetem",
     "mistnost": "hrad"
   },
   {
-    "jmeno": "Kouzelnik",
+    "jmeno": "Malagar",
+    "dialog": "Chcpini pidizviku",
+    "zdravi": 100,
+    "sila": 20,
+    "kritikal": 50,
+    "NPCTyp": "bojovnik",
+    "mistnost": "magova vez"
+  },
+  {
+    "jmeno": "kouzelnik",
     "dialog": "Odpověz správně na mou hádanku a dostaneš amulet!",
-    "typ": "hadankar",
+    "NPCTyp": "hadankar",
     "hadanka": "Leze leze po zeleze neda pokej nez tam vleze. Co to je?",
     "odpoved": "klic",
     "mistnost": "svatyne"
   },
   {
-    "jmeno": "Prodejce",
-    "dialog": "Vse me zbozi pro tebe vypada moc levne ale mam tu jednu takovou truhlu, ale nemam od ni klice pokud ho sezenes tak ti ji dam zadarmiko, ale chci vedet co tam je",
-    "typ": "univerzal",
-    "mistnost": "veznice"
+    "jmeno": "knihovnik",
+    "dialog": "Tady neco mas, radsi to nebudu rikat nahlas",
+    "NPCTyp": "spredmetem",
+    "mistnost": "knihovna"
   },
   {
-  "jmeno": "Straz",
+  "jmeno": "Zlodej",
   "dialog": "Chcpini mrdko",
   "zdravi": 100,
   "sila": 10,
   "kritikal": 30,
-  "typ": "bojovnik",
+  "NPCTyp": "bojovnik",
   "mistnost": "cesta"
-}
+},
+  {
+    "jmeno": "krysa",
+    "dialog": "pipipipi",
+    "zdravi": 30,
+    "sila": 5,
+    "kritikal": 15,
+    "NPCTyp": "bojovnik",
+    "mistnost": "jeskyne"
+  }
 ]

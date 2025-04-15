@@ -11,6 +11,7 @@ public class Informace extends Predmet{
     }
     @Override
     public String pouzij(Hra hra) {
-        return "";
+
+        return "Zjistil jsi ze: "+inforamce;
     }
 }

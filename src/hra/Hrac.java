@@ -9,15 +9,20 @@ public class Hrac {
     private int presnost;       // %
     private int kritikal;       // %
     private int sila;
-    private boolean hledanost;
+    private boolean zbran;
+    private int silaBonus = 0;
+    private int silaBonusDoba = 0;
+    private int zdraviBonus = 0;
+    private int zdraviBonusDoba = 0;
 
     public Hrac(Mistnost startovniMistnost) {
 
         this.aktualniMistnost = startovniMistnost;
-        this.zdravi = 100;                                               // pak zmen na 100
+        this.zdravi = 100;
         this.sila = 10;
-        this.presnost = 100;
-        this.kritikal = 50;
+        this.presnost = 80;
+        this.kritikal = 40;
+        this.zbran = false;
     }
 
     public String presunSe(String nazevMistnosti, HerniSvet svet) {
@@ -28,20 +33,17 @@ public class Hrac {
             return "Tam nemůžeš jít.";
         }
     }
-    private String vypisObsahMistnosti() {
+    public String vypisObsahMistnosti() {
         Mistnost mistnost = aktualniMistnost;
         String odpoved = "";
-        if (mistnost.getPredmety() != null) {
-            for (Predmet predmet : mistnost.getPredmety()) {
-                odpoved += "\nVidíš zde předmět: " + predmet;
-            }
+        odpoved += "\n"+ mistnost.getPopis();
+        if (mistnost.getPredmet() != null) {
+            odpoved += "\nVidíš zde předmět: " + mistnost.getPredmet();
+
         }
         if (mistnost.getNpc() != null) {
             odpoved += "\nJe zde postava: " + mistnost.getNpc().getJmeno();
         }
-
-        odpoved += "\n"+ mistnost.getPopis();
-
         return odpoved;
     }
 
@@ -51,7 +53,7 @@ public class Hrac {
     }
 
     public int getZdravi() {
-        return zdravi;
+        return zdravi + zdraviBonus;
     }
 
     public void setZdravi(int zdravi) {
@@ -59,7 +61,7 @@ public class Hrac {
     }
 
     public int getSila() {
-        return sila;
+        return sila + silaBonus;
     }
 
     public void setSila(int sila) {
@@ -76,5 +78,40 @@ public class Hrac {
 
     public int getKritikal() {
         return kritikal;
+    }
+
+    public boolean isZbran() {
+        return zbran;
+    }
+
+    public void setZbran(boolean zbran) {
+        this.zbran = zbran;
+    }
+
+    public void pridatSilaBonus(int bonus, int doba) {
+        this.silaBonus = bonus;
+        this.silaBonusDoba = doba;
+    }
+    public void pridatZdraviBonus(int bonus, int doba) {
+        this.zdraviBonus = bonus;
+        this.zdraviBonusDoba = doba;
+    }
+    
+    public void snizitSilaBonusDoba() {
+        if (silaBonusDoba > 0) {
+            silaBonusDoba--;
+            if (silaBonusDoba == 0) {
+                silaBonus = 0; // Bonus vyprší
+            }
+        }
+    }
+
+    public void snizitZdraviBonusDoba() {
+        if (zdraviBonusDoba > 0) {
+            zdraviBonusDoba--;
+            if (zdraviBonusDoba == 0) {
+                zdraviBonus = 0; // Bonus vyprší
+            }
+        }
     }
 }

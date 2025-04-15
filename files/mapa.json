@@ -2,59 +2,47 @@
   {
     "nazev": "hrad",
     "popis": "Nachazis se v hradu Eldor.",
-    "sousedi": ["cesta"],
-    "predmety": [
-      {
-        "nazev": "Smlouva",
-        "typ": "Informace",
-        "informace": "Zabij temného mága a dostaneš mou princeznu."
-      },
-      {
-        "nazev": "Klenot",
-        "typ": "Informace",
-        "informace": "Tento klenot má obrovskou hodnotu."
-      }
-    ]
+    "sousedi": ["cesta"]
   },
   {
     "nazev": "cesta",
     "popis": "Obchodní cesta propojující vše.",
-    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "vstupni hala"],
+    "sousedi": ["hrad", "zbrojnice", "knihovna", "svatyne", "veznice", "brana do veze"],
     "predmety": []
   },
   {
     "nazev": "zbrojnice",
-    "popis": "Zde se prodávají zbraně a brnění.",
-    "sousedi": ["cesta"],
-    "predmety": [
-      {
-        "nazev": "Meč osudu",
-        "typ": "Zbran",
-        "sila": 15
-      },
-      {
-        "nazev": "Štít draka",
-        "typ": "Zbran",
-        "sila": 8
-      }
-    ]
+    "popis": "Kral tu pro tebe neco nechal",
+    "sousedi": ["cesta"]
   },
   {
   "nazev": "knihovna",
   "popis": "Mestska knihovna, mozna zde budou nejake zajimave informace.",
-  "sousedi": ["cesta"],
-  "predmet": []
+  "sousedi": ["cesta"]
 },
   {
     "nazev": "svatyne",
     "popis": "Stara svatyne s hodnym kouzelnikem.",
-    "sousedi": ["cesta"],
-    "predmet": []
+    "sousedi": ["cesta"]
   },
   {
     "nazev": "veznice",
     "popis": "Veznice s vezni",
-    "sousedi": ["cesta", "jeskyne"],
-    "predmet": []
+    "sousedi": ["cesta", "jeskyne"]
+  },
+  {
+    "nazev": "jeskyne",
+    "popis": "Tmava jeskyne",
+    "sousedi": ["veznice"]
+  },
+  {
+    "nazev": "brana do veze",
+    "popis": "Posledni cesta zpatky",
+    "sousedi": ["cesta", "magova vez"]
+  },
+  {
+    "nazev": "magova vez",
+    "popis": "Uz zde na tebe ceka temny mag Malagar",
+    "sousedi": []
   }
 ]
