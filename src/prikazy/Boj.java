@@ -210,15 +210,17 @@ public class Boj implements Command {
         System.out.println();
         Scanner scanner = new Scanner(System.in);
         String vstup = scanner.nextLine();
-        if (inventar.najdipredmet(vstup) != null) {
-            inventar.najdipredmet(vstup).pouzij(hra);
-            System.out.println(inventar.najdipredmet(vstup).getNazev());
+
+        Predmet predmet = inventar.najdipredmet(vstup);
+        if (predmet != null) {
+            System.out.println(predmet.pouzij(hra));
         } else {
             System.out.println("Tento predmet nemas");
         }
         hrac.snizitSilaBonusDoba();
         hrac.snizitZdraviBonusDoba();
     }
+
 
     /**
      * Pokusí se o útěk hráče z boje.

@@ -18,39 +18,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="skoto hotovo 99%">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/predmety.json" beforeDir="false" afterPath="$PROJECT_DIR$/files/predmety.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/HerniSvet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/HerniSvet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/Hrac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Hrac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/Inventar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/Inventar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hra/SeznamPrikazu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hra/SeznamPrikazu.java" afterDir="false" />
+    <list default="true" id="5b32c367-ffab-423f-9acb-7cdbaa5af58a" name="Changes" comment="dokumentace">
       <change beforePath="$PROJECT_DIR$/src/prikazy/Boj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Boj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Jdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Jdi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Konec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Konec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Mluv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Mluv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/OtevriInventar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/OtevriInventar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Pomoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Pomoc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Pouzij.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Pouzij.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prikazy/Vezmi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prikazy/Vezmi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/Mistnost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/Mistnost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Bojovnik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Boss.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Hadankar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Odemykac.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/SPredmetem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/SPredmetem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/npcs/Univerzal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/npcs/Univerzal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Bonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Informace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Informace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/LektvarZdravi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/LektvarZdravi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Predmet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Predmet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svet/predmety/Zbran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/svet/predmety/Zbran.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/NacitacSouboru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +113,7 @@
       <workItem from="1744031706493" duration="7591000" />
       <workItem from="1744180502873" duration="5349000" />
       <workItem from="1744644969574" duration="11664000" />
-      <workItem from="1744731134445" duration="20867000" />
+      <workItem from="1744731134445" duration="21190000" />
     </task>
     <task id="LOCAL-00001" summary="ve skole">
       <option name="closed" value="true" />
@@ -202,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744749623078</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="dokumentace">
+      <option name="closed" value="true" />
+      <created>1744752096876</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744752096876</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +193,8 @@
     <MESSAGE value="boj hotovej az na nepritel AI" />
     <MESSAGE value="boj je done&#10;jeste ale asi debug" />
     <MESSAGE value="skoto hotovo 99%" />
-    <option name="LAST_COMMIT_MESSAGE" value="skoto hotovo 99%" />
+    <MESSAGE value="dokumentace" />
+    <option name="LAST_COMMIT_MESSAGE" value="dokumentace" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

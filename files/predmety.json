@@ -29,7 +29,7 @@
     "PredmetTyp": "bonus",
     "nazev": "pivo",
     "bonus": 20,
-    "doba": 2,
+    "doba": 3,
     "typ": "zdravi",
     "mistnost": "svatyne",
     "npc": 1
@@ -38,7 +38,7 @@
     "PredmetTyp": "bonus",
     "nazev": "nakopavac",
     "bonus": 30,
-    "doba": 1,
+    "doba": 2,
     "typ": "sila",
     "mistnost": "jeskyne"
   },
