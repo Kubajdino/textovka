@@ -41,5 +41,12 @@
     "doba": 1,
     "typ": "sila",
     "mistnost": "jeskyne"
+  },
+  {
+    "PredmetTyp": "informace",
+    "nazev": "konec",
+    "informace": "Konec",
+    "mistnost": "magova vez",
+    "npc": 1
   }
 ]

@@ -6,8 +6,7 @@ public class Main {
     public static void main(String[] args){
 
           Hra hra = new Hra();
-          hra.run();
-      //  Okno okno = new Okno();
+        System.out.println(hra.run());
 
     }
 }
